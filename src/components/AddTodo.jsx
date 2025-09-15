@@ -4,7 +4,7 @@ import {useState} from 'react';
 function AddTodo({onAddTodo}){
   const [input, setInput] = useState('');
   
-  const handleSubmit = (e) =>{
+  const handleSubmmit = (e) =>{
     e.preventDefault();
     if(input.trim()){
       onAddTodo(input);
@@ -13,7 +13,7 @@ function AddTodo({onAddTodo}){
   };
 
   return(
-    <form onSubmit={handleSubmit} className='mb-6' >
+    <form onSubmit={handleSubmmit} className='mb-6' >
       <div className='flex'>
         <input type="text" value={input} onChange={(e)=> setInput(e.target.value)}
         placeholder='Add new todo...' 
