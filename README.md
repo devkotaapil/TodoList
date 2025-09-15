@@ -72,6 +72,7 @@ todo-list/
   src/
     components/
       AddTodo.jsx
+      TodoItem.jsx
       TodoList.jsx
     App.jsx
     main.jsx
