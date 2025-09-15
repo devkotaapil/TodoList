@@ -1,12 +1,95 @@
-# React + Vite
+# Todo List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React + Vite todo list application styled with Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add new todos (using `AddTodo` component)
+- Toggle completion status
+- Delete todos
+- Responsive UI
 
-## Expanding the ESLint configuration
+## Components
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### AddTodo
+
+The `AddTodo` component provides an input field and button to add new todos.  
+It uses React state and calls the `onAddTodo` prop when a new todo is submitted.
+
+**Example usage:**
+```jsx
+import AddTodo from './components/AddTodo';
+
+function App() {
+  const handleAddTodo = (todoText) => {
+    // Add todo logic here
+  };
+
+  return (
+    <AddTodo onAddTodo={handleAddTodo} />
+  );
+}
+```
+
+## Getting Started
+
+### Installation
+
+1. Clone the repository:
+   ```sh
+   git clone <your-repo-url>
+   cd todo-list
+   ```
+
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Build for Production
+
+```sh
+npm run build
+```
+
+### Preview Production Build
+
+```sh
+npm run preview
+```
+
+## Project Structure
+
+```
+todo-list/
+  src/
+    components/
+      AddTodo.jsx
+      TodoList.jsx
+    App.jsx
+    main.jsx
+    index.css
+  public/
+  index.html
+  package.json
+  vite.config.js
+  tailwind.config.js
+  postcss.config.cjs
+```
+
+## Technologies Used
+
+- React
+- Vite
+- Tailwind CSS
+
+## License
+
+MIT
